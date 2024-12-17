@@ -22509,7 +22509,7 @@ picture {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover; /* Adjusts how the image fills the space */
+   
 }
 
 
