@@ -21643,6 +21643,7 @@ ol.comment-list li .children li {
         height: auto;
         width: 100%;
     }
+    
 }
 .logo-header span {
     font-size: 20px;
@@ -21688,6 +21689,7 @@ ol.comment-list li .children li {
     .site-header .extra-nav .btn {
         padding-left: 15px;
         padding-right: 15px;
+        display: none;
     }
 }
 
@@ -21732,7 +21734,8 @@ ol.comment-list li .children li {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
-    background: #000;
+    background: #fff;
+   
 }
 
 .navicon span:nth-child(1) {
