@@ -21638,7 +21638,12 @@ ol.comment-list li .children li {
     height: 80px;
     width: 100%;
 }
-
+@media only screen and (max-width: 575px) {
+    .logo-header img {
+        height: auto;
+        width: 100%;
+    }
+}
 .logo-header span {
     font-size: 20px;
     letter-spacing: 20px;
