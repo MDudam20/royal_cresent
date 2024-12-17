@@ -21892,6 +21892,7 @@ ol.comment-list li .children li {
         padding: 8px 0;
         display: block;
         line-height: 30px;
+        color: #000;
     }
 }
 
@@ -22498,32 +22499,24 @@ footer .widget-link a {
     100% { height: 0; }
 }
 
-@media (max-width: 768px) { 
-    li[data-index="rs-3042"] .rev-slidebg {
-      background-image: url('images/background/banner5.webp') !important;
-      background-position: center center !important;
-      background-size: cover !important;
-    }
-    li[data-index="rs-3043"] .rev-slidebg {
-        background-image: url('images/background/banner4-mobile.png') !important;
-        background-position: center center !important;
-        background-size: cover !important;
-      }
-    li[data-index="rs-3044"] .rev-slidebg {
-        background-image: url('images/background/banner1.webp') !important;
-        background-position: center center !important;
-        background-size: cover !important;
-    }
-    li[data-index="rs-3045"] .rev-slidebg {
-        background-image: url('images/background/banner2-mobile.png') !important;
-        background-position: center center !important;
-        background-size: cover !important;
-    }
-    li[data-index="rs-3046"] .rev-slidebg {
-        background-image: url('images/background/banner3.webp') !important;
-        background-position: center center !important;
-        background-size: cover !important;
-    }
-    
-  }
+picture {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.responsive-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Adjusts how the image fills the space */
+}
+
+
+.image-container {
+    width: 100%;
+    max-width: 1920px; /* Optional: Limit the maximum width */
+    height: auto;
+    overflow: hidden;
+}
   

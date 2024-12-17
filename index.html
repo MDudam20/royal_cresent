@@ -218,8 +218,18 @@
                                         data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
                                         data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                         <!-- MAIN IMAGE -->
-                                        <img src="images/background/banner4.webp" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 200" data-offsetend="0 -200"
-                                            alt="" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+                                        <picture>
+                                            <!-- Small size image for screens up to 425px -->
+                                            <source srcset="images/background/banner4-mobile.png" media="(max-width: 425px)">
+                                            <!-- Default image for larger screens -->
+                                            <img 
+                                                src="images/background/banner4.webp" 
+                                                class="responsive-image" 
+                                                alt="Responsive Banner"
+                                                style="width: 100%; height: auto;">
+                                        </picture>
+                                        <!-- <img src="images/background/banner4.webp" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 200" data-offsetend="0 -200"
+                                            alt="" data-bgparallax="10" class="rev-slidebg" data-no-retina=""> -->
                                         <div class="tp-caption tp-shape tp-shapewrapper " id="slide-100-layer" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full"
                                             data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}]'
                                             data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 2;background-color:rgba(0, 0, 0, 0.3);border-color:rgba(0, 0, 0, 0);border-width:0px;">
@@ -322,8 +332,18 @@
                                         data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
                                         data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                         <!-- MAIN IMAGE -->
-                                        <img src="images/background/banner2.webp" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 200" data-offsetend="0 -200"
-                                            alt="" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+                                        <picture>
+                                            <!-- Small size image for screens up to 425px -->
+                                            <source srcset="images/background/banner2-mobile.png" media="(max-width: 425px)">
+                                            <!-- Default image for larger screens -->
+                                            <img 
+                                                src="images/background/banner2.webp" 
+                                                class="responsive-image" 
+                                                alt="Responsive Banner"
+                                                style="width: 100%; height: auto;">
+                                        </picture>
+                                        <!-- <img src="images/background/banner2.webp" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 200" data-offsetend="0 -200"
+                                            alt="" data-bgparallax="10" class="rev-slidebg" data-no-retina=""> -->
                                         <div class="tp-caption tp-shape tp-shapewrapper " id="slide-100-layer" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full"
                                             data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}]'
                                             data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 2;background-color:rgba(0, 0, 0, 0.3);border-color:rgba(0, 0, 0, 0);border-width:0px;">
@@ -525,6 +545,8 @@
     <!-- OWL-CAROUSEL -->
     <script src="js/custom.js"></script>
     <!-- CUSTOM JS -->
+   
+    
 
     <!-- REVOLUTION JS FILES -->
     <script src="vendor/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
