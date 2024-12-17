@@ -22499,7 +22499,7 @@ footer .widget-link a {
     100% { height: 0; }
 }
 
-picture {
+/* picture {
     display: block;
     width: 100%;
     height: auto;
@@ -22515,8 +22515,8 @@ picture {
 
 .image-container {
     width: 100%;
-    max-width: 1920px; /* Optional: Limit the maximum width */
+    max-width: 1920px; 
     height: auto;
     overflow: hidden;
 }
-  
+   */
