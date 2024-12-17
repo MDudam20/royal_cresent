@@ -22498,3 +22498,32 @@ footer .widget-link a {
     100% { height: 0; }
 }
 
+@media (max-width: 768px) { 
+    li[data-index="rs-3042"] .rev-slidebg {
+      background-image: url('images/background/banner5.webp') !important;
+      background-position: center center !important;
+      background-size: cover !important;
+    }
+    li[data-index="rs-3043"] .rev-slidebg {
+        background-image: url('images/background/banner4-mobile.png') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+      }
+    li[data-index="rs-3044"] .rev-slidebg {
+        background-image: url('images/background/banner1.webp') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    li[data-index="rs-3045"] .rev-slidebg {
+        background-image: url('images/background/banner2-mobile.png') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    li[data-index="rs-3046"] .rev-slidebg {
+        background-image: url('images/background/banner3.webp') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    
+  }
+  
