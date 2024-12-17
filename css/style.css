@@ -1,34 +1,34 @@
-/*
-    Name: KingArchitect 
-    Author: DexignZone
-    Portfolio : https://themeforest.net/user/dexignzone/portfolio
-   
-
-    Table of Content: 
-
-    1. Abstract
-    2. Bootstrap CSS
-    3. Base
-    4. Layout
-    5. Component
-    6. Dashboard
-    7. Pages
-    
-    
-*/
-
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("../icons/line-awesome/css/line-awesome.min.css");
 @import url("../icons/font-awesome/css/font-awesome.min.css");
 @import url("../icons/flaticon/flaticon.css");
 @import url("../icons/themify/themify-icons.css");
+
+@font-face {
+    font-family: 'againstregular';
+    src: url(../icons/font-awesome/fonts/againstregular.woff2);
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'GildaDisplay-Regular';
+    src: url(../icons/font-awesome/fonts/GildaDisplay-Regular.woff2);
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'BrittanySignature';
+    src: url(../icons/font-awesome/fonts/BrittanySignature.woff2);
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'FuturaMdBTMedium';
+    src: url(../icons/font-awesome/fonts/FuturaMdBTMedium.woff2);
+    font-style: normal;
+    font-weight: 100;
+}
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -2705,8 +2705,9 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #a6611c;
-    border-color: #a6611c;
+    background-color: #C4AF6B;
+    border-color: #C4AF6B;
+    font-family: ;
 }
 
 .btn-primary:hover {
@@ -21634,7 +21635,7 @@ ol.comment-list li .children li {
 }
 
 .logo-header img {
-    height: auto;
+    height: 80px;
     width: 100%;
 }
 
@@ -21830,16 +21831,17 @@ ol.comment-list li .children li {
 }
 
 .header-nav .nav>li>a {
-    color: #020d26;
+    color: #fff;
     font-size: 16px;
     padding: 32px 12px 32px 12px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
     display: inline-block;
     position: relative;
     border-width: 0 0 0 1px;
     text-transform: uppercase;
     line-height: 1;
+    font-family: 'FuturaMdBTMedium', sans-serif;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -22173,6 +22175,8 @@ ol.comment-list li .children li {
 .top-bar .dlab-topbar-right ul li {
     display: inline-block;
     font-size: 15px;
+    color: #C4AF6B;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -22186,7 +22190,7 @@ ol.comment-list li .children li {
 .top-bar .dlab-topbar-center ul i,
 .top-bar .dlab-topbar-left ul i,
 .top-bar .dlab-topbar-right ul i {
-    color: #a6611c;
+    color: #fff;
     transform: scale(1.3);
     -moz-transform: scale(1.3);
     -webkit-transform: scale(1.3);
@@ -22211,7 +22215,9 @@ ol.comment-list li .children li {
 
 .header-transparent .top-bar {
     color: #777;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
+   
 }
 
 @media only screen and (max-width: 575px) {
@@ -22455,3 +22461,32 @@ footer .widget-link a {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.animated-border {
+    position: relative;
+    overflow: hidden;
+}
+.animated-border::before, 
+.animated-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #f39c12;
+    animation: slide 2s infinite;
+}
+.animated-border::before {
+    left: 0;
+}
+.animated-border::after {
+    right: 0;
+}
+
+@keyframes slide {
+    0% { height: 0; }
+    50% { height: 100%; }
+    100% { height: 0; }
+}
+
