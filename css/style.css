@@ -21635,8 +21635,9 @@ ol.comment-list li .children li {
 }
 
 .logo-header img {
-    height: 80px;
+    height: 100px;
     width: 100%;
+    padding: 10px 0px;
 }
 @media only screen and (max-width: 575px) {
     .logo-header img {
@@ -22180,7 +22181,7 @@ ol.comment-list li .children li {
 }
 
 .top-bar .dlab-topbar-center ul li,
-.top-bar .dlab-topbar-left ul li,
+.top-bar .dlab-topbar-left ul li ,
 .top-bar .dlab-topbar-right ul li {
     display: inline-block;
     font-size: 15px;
