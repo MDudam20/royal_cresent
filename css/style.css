@@ -22548,7 +22548,7 @@ footer .widget-link a {
 }
 
 .logo-header img {
-    max-width: 130px; /* Adjust logo size */
+    max-width: 120px; /* Adjust logo size */
     height: auto;
     object-fit: contain; /* Maintain aspect ratio */
 }
