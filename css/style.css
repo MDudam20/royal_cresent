@@ -21611,7 +21611,7 @@ ol.comment-list li .children li {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    width: 150px;
+    /* width: 150px; */
     height: 80px;
     position: relative;
     z-index: 9;
@@ -21619,13 +21619,13 @@ ol.comment-list li .children li {
 
 @media only screen and (max-width: 1199px) {
     .logo-header {
-        width: 130px;
+        /* width: 130px; */
     }
 }
 
 @media only screen and (max-width: 575px) {
     .logo-header {
-        width: 120px;
+        /* width: 120px; */
     }
 }
 
@@ -21666,7 +21666,30 @@ ol.comment-list li .children li {
 .site-header .container {
     position: relative;
 }
-
+.logo-header-left img{
+    width: 130px;
+    position: absolute;
+    left: 85%;
+    top: 20px;
+}
+@media only screen and (max-width: 920px){
+    .logo-header-left img{
+        width: 130px;
+        position: absolute;
+        left: 75%;
+        top: 20px;
+    }
+    .navbar-toggler {
+        border: 0 solid #efbb20;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 31px 0 31px 27px;
+    padding: 0;
+    float: right;
+    outline: none !important;
+        
+    }
+}
 .site-header .extra-nav {
     float: right;
     height: 80px;
@@ -21693,15 +21716,39 @@ ol.comment-list li .children li {
         padding-right: 15px;
         display: none;
     }
+    .logo-header-left img{
+        width: 130px;
+        position: absolute;
+        left: 65%;
+        top: 20px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .logo-header-left img{
+        width: 110px;
+        position: absolute;
+        left: 65%;
+        top: 20px;
+    }
+    .navbar-toggler {
+        border: 0 solid #efbb20;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 31px 0 31px 27px;
+    padding: 0;
+    float: left;
+    outline: none !important;
+        
+    }
 }
 
 .navbar-toggler {
     border: 0 solid #efbb20;
     font-size: 16px;
     line-height: 24px;
-    margin: 31px 0 31px 15px;
+    margin: 31px 0 31px 31px;
     padding: 0;
-    float: right;
+    float: left;
     outline: none !important;
 }
 
