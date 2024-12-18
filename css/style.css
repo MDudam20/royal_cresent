@@ -21641,8 +21641,9 @@ ol.comment-list li .children li {
 }
 @media only screen and (max-width: 575px) {
     .logo-header img {
-        height: auto;
+        height: 90px;
         width: 100%;
+        padding: 10px 0px;
     }
     
 }
@@ -22181,8 +22182,8 @@ ol.comment-list li .children li {
 }
 
 .top-bar .dlab-topbar-center ul li,
-.top-bar .dlab-topbar-left ul li ,
-.top-bar .dlab-topbar-right ul li {
+.top-bar .dlab-topbar-left ul li a,
+.top-bar .dlab-topbar-right ul li a {
     display: inline-block;
     font-size: 15px;
     color: #C4AF6B;
