@@ -4594,6 +4594,9 @@ input[type="button"].btn-block {
     
 }
 
+.custom-menu li a:hover{
+    color: #c4af6b !important;
+}
 .navbar-text {
     display: inline-block;
     padding-top: 0.5rem;
@@ -22069,11 +22072,12 @@ ol.comment-list li .children li {
     visibility: hidden;
     width: 220px;
     z-index: 10;
-    margin-top: 20px;
+    margin-top:0;
     box-shadow: 0px 1px 40px 0px rgba(0, 0, 0, 0.1);
     -webkit-transition: all 0.8s;
     -ms-transition: all 0.8s;
     transition: all 0.8s;
+    top: 60px;
 }
 
 @media only screen and (max-width: 991px) {
