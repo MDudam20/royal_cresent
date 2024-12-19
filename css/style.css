@@ -2705,30 +2705,32 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #C4AF6B;
-    border-color: #C4AF6B;
-    font-family: ;
+    background-color:#3b0000;
+    border-color: #3b0000;
+    font-family: 'againstregular';
+    letter-spacing: 1px;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #854e16;
-    border-color: #7a4815;
+    background-color: #c4af6b;
+    border-color: #c4af6b;
+    
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
-    background-color: #854e16;
-    border-color: #7a4815;
+    background-color: #c4af6b;
+    border-color: #c4af6b;
     box-shadow: 0 0 0 0rem rgba(179, 121, 62, 0.5);
 }
 
 .btn-primary.disabled,
 .btn-primary:disabled {
     color: #fff;
-    background-color: #a6611c;
-    border-color: #a6611c;
+    background-color: #c4af6b;
+    border-color: #c4af6b;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
@@ -4575,6 +4577,21 @@ input[type="button"].btn-block {
 .navbar-nav .dropdown-menu {
     position: static;
     float: none;
+}
+.custom-menu li a {
+    position: relative;
+    padding-left: 22px !important; /* Space for the dot */
+}
+
+.custom-menu li a::before {
+    content: "•"; /* Unicode for the dot */
+    color: #c4af6b    ; /* Color of the dot */
+    font-size: 24px; /* Size of the dot */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
 }
 
 .navbar-text {
@@ -12276,22 +12293,23 @@ section {
 section:after {
     content: attr(data-content);
     position: absolute;
-    top: -28px;
-    font-size: 200px;
+    top: -20px;
+    font-size: 80px;
     font-weight: 700;
     color: transparent;
     line-height: 1;
-    -webkit-text-stroke: 1px #000;
+    -webkit-text-stroke: 1px #3b0000;
     z-index: -1;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: 'againstregular', sans-serif;
     opacity: 0.1;
     left: 0;
 }
 
 @media only screen and (max-width: 1400px) {
     section:after {
-        font-size: 140px;
-        top: -20px;
+        font-size: 80px;
+        top: -15px;
+        left: 50px;
     }
 }
 
@@ -12324,6 +12342,17 @@ section:after {
     line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
+    font-family:  'againstregular', sans-serif;
+    color: #3b0000;
+}
+
+.section-head h2.title-a {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family:  'againstregular', sans-serif;
+    color: #c4af6b;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -12395,12 +12424,21 @@ section:after {
 }
 
 .section-head p {
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'FuturaMdBTMedium', sans-serif;
+    color: #000;
+    text-align: justify;
+}
+.section-head h4{
+    font-family: 'GildaDisplay-Regular', sans-serif;
+    color: #c4af6b;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 1400px) {
     .section-head p {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -16579,7 +16617,7 @@ label.error {
 }
 
 .about-box .about-bg {
-    background-image: url(../images/about/about.png);
+    background-image: url(../images/royal/abous-us.png);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 62%;
@@ -16587,20 +16625,24 @@ label.error {
     width: 100%;
     height: 100%;
     left: 0;
-    top: 0;
+    top: -150px;
     animation: wave2 3s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+   
 }
 
 @media only screen and (max-width: 1400px) {
     .about-box .about-bg {
-        background-size: 65%;
+        background-size: 60%;
+        top: -120px;
+        /* left: 8px; */
     }
 }
 
 @media only screen and (max-width: 1199px) {
     .about-box .about-bg {
-        background-size: 92%;
-        background-position: right -220px bottom;
+        background-size: 80%;
+        background-position: right -100px bottom;
+        top: -100px;
     }
 }
 
@@ -16616,7 +16658,7 @@ label.error {
     z-index: 1;
 }
 
-.about-box::before {
+/* .about-box::before {
     content: "";
     background-image: url(../images/about/about1.png);
     background-repeat: no-repeat;
@@ -16628,7 +16670,7 @@ label.error {
     left: 0;
     top: 0;
     animation: wave1 4s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-}
+} */
 
 @media only screen and (max-width: 1400px) {
     .about-box::before {
@@ -16995,17 +17037,18 @@ label.error {
 }
 
 .service-row .col {
-    max-width: 20%;
-    flex: 0 0 20%;
+    max-width: 25%;
+    flex: 0 0 25%;
     background: #fff;
+    border: 1px solid #3b0000    ;
 }
 
 .service-row .col:nth-child(2n) {
-    background: #faf8f2;
+    background: #c4af6b;
 }
 
 .service-row .col:nth-child(2n) .info {
-    background: #faf8f2;
+    background: #c4af6b;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -17037,12 +17080,12 @@ label.error {
 
 @media only screen and (max-width: 1400px) {
     .service-box .media img {
-        height: 150px;
+        height: 200px;
     }
 }
 
 .service-box .info {
-    background: #fff;
+    background:#c4af6b;
     padding: 25px 30px;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -18988,22 +19031,46 @@ label.error {
 
 .aminite-icon-bx {
     padding: 25px 10px;
-    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 3px 0 rgb(255 255 255 / 20%);
     text-align: center;
+    border: 2px solid #fff;
+    border-radius: 17px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.aminite-icon-bx i {
-    font-size: 70px;
-    line-height: 70px;
-    color: #000;
+.aminite-icon-bx:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    transform: translateY(-10px);
+}
+
+.aminite-icon-bx img {
+    /* font-size: 70px;
+    line-height: 70px; */
+    color: #c4af6b;
     margin-bottom: 10px;
-    display: block;
+    display: inline-block;
+    transition: transform 0.6s ease;
+    width: 35%;
+    
+}
+
+.aminite-icon-bx:hover img {
+    transform: rotateY(360deg);
 }
 
 .aminite-icon-bx .title {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    color: #fff;
+    font-family: 'FuturaMdBTMedium';
+    padding-top: 10px;
+}
+
+.aminite-icon-bx:hover .title {
+    color: #c4af6b;
 }
 
 .gallery-bottom {
@@ -21366,7 +21433,7 @@ ol.comment-list li .children li {
     height: 100%;
     right: 0;
     top: 0;
-    background-color: #f9f9f9;
+    background-color:#3b0000;
     z-index: -1;
 }
 
@@ -21379,7 +21446,7 @@ ol.comment-list li .children li {
 }
 
 .exhibition-carousel .owl-dot.active {
-    background: #a6611c;
+    background: #ffd700;
 }
 
 .exhibition-carousel .owl-dots {
@@ -21635,17 +21702,61 @@ ol.comment-list li .children li {
 }
 
 .logo-header img {
-    height: 100px;
+    height: 108px;
     width: 100%;
     padding: 10px 0px;
+    position: relative;
+    top: -24px;
+
+} 
+.logo-header-b img{
+        /* height: 60%; */
+        height: 50px;
+        position: absolute;
+        right: 65px;
+        top: 14px;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 980px){
+    .logo-header-b img{
+        right: 60px;
+        height: 60px !important;
+    }
     .logo-header img {
-        height: 90px;
+        height: 115px;
         width: 100%;
         padding: 10px 0px;
+        position: relative;
+        top: -24px;
+    }
+}
+/* @media only screen and (max-width: 1120px){
+    .logo-header-b img{
+        right: 40px;
+        height: 40px;
+    }
+} */
+
+@media only screen and (max-width: 575px) {
+    .logo-header img {
+        height: 115px;
+        width: 100%;
+        padding: 10px 0px;
+        top: 0px;
     }
     
+}
+@media only screen and (max-width: 470px){
+    .logo-header img {
+        height: 90px !important;
+        width: 100%;
+        padding: 10px 0px;
+        top: 0px;
+    }
+    .logo-header-b img{
+        height: 40px !important;
+        top:20px;
+        right: 10px;
+    }
 }
 .logo-header span {
     font-size: 20px;
@@ -21679,6 +21790,8 @@ ol.comment-list li .children li {
     outline: none !important;
         
     }
+    
+   
 }
 .site-header .extra-nav {
     float: right;
@@ -21714,12 +21827,22 @@ ol.comment-list li .children li {
     border: 0 solid #efbb20;
     font-size: 16px;
     line-height: 24px;
-    margin: 40px 0 31px 31px;
+    margin: 30px 0 31px 31px;
     padding: 0;
     float: right;
     outline: none !important;
 }
-
+@media only screen and (max-width: 575px){
+    .navbar-toggler {
+        border: 0 solid #efbb20;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 30px 0 31px 31px;
+        padding: 0;
+        float: left;
+        outline: none !important;
+    }
+}
 .navicon {
     width: 20px;
     height: 18px;
@@ -21858,7 +21981,7 @@ ol.comment-list li .children li {
 .header-nav .nav>li>a {
     color: #fff;
     font-size: 16px;
-    padding: 32px 12px 32px 12px;
+    padding: 32px 25px 32px 12px;
     cursor: pointer;
     font-weight: 500;
     display: inline-block;
@@ -22156,7 +22279,8 @@ ol.comment-list li .children li {
 .top-bar {
     background-color: #191f23;
     color: #fff;
-    padding: 8px 0;
+    /* padding: 8px 0;
+     */
 }
 
 @media only screen and (max-width: 575px) {
@@ -22175,6 +22299,8 @@ ol.comment-list li .children li {
 
 .top-bar .dlab-topbar-right {
     float: right;
+   /* background-color: #3b0000; */
+   padding: 8px 0;
 }
 
 .top-bar .dlab-topbar-right li {
@@ -22242,7 +22368,7 @@ ol.comment-list li .children li {
 .header-transparent .top-bar {
     color: #777;
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.3);  */
    
 }
 
@@ -22538,52 +22664,100 @@ footer .widget-link a {
 }
    */
    /* Main container for logos */
-.logo-container {
+/* .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Space between logos and vertical line */
+    gap: 20px; 
     padding: 10px 0;
     position: absolute;
 }
 
 .logo-header img {
-    max-width: 120px; /* Adjust logo size */
+    max-width: 120px; 
     height: auto;
-    object-fit: contain; /* Maintain aspect ratio */
+    object-fit: contain; 
 }
 .logo-header-b img {
-    max-width: 150px; /* Adjust logo size */
+    max-width: 150px; 
     height: auto;
-    object-fit: contain; /* Maintain aspect ratio */
+    object-fit: contain; 
 }
 .vertical-line {
-    width: 2px; /* Thickness of the vertical line */
-    height: 50px; /* Height of the line */
-    background-color: #ffd658; /* Color of the line */
+    width: 2px; 
+    height: 50px; 
+    background-color: #ffd658; 
 }
 @media only screen and (max-width: 1100px){
     .logo-header img {
-        max-width: 120px; /* Adjust logo size */
+        max-width: 120px; 
         height: auto;
-        object-fit: contain; /* Maintain aspect ratio */
+        object-fit: contain;
     }
     .logo-header-b img {
-        max-width: 150px; /* Adjust logo size */
+        max-width: 150px; 
         height: auto;
-        object-fit: contain; /* Maintain aspect ratio */
+        object-fit: contain; 
     }
 }
 @media only screen and (max-width: 500px){
     .logo-header img {
-        max-width: 90px; /* Adjust logo size */
+        max-width: 90px; 
         height: auto;
-        object-fit: contain; /* Maintain aspect ratio */
+        object-fit: contain; 
     }
     .logo-header-b img {
-        max-width: 120px; /* Adjust logo size */
+        max-width: 120px; 
         height: auto;
-        object-fit: contain; /* Maintain aspect ratio */
+        object-fit: contain; 
     }
     
+} */
+
+
+.amenities-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.amenities-section .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/royal/v-b.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px); /* Blurs the background image */
+    z-index: -2; /* Sends it behind everything */
+}
+
+.amenities-section .black-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black shade with 60% opacity */
+    z-index: -1; /* Place it above the background image */
+}
+
+.amenities-section .container {
+    position: relative; /* Ensures the content stays above the background */
+    z-index: 1; /* Places it above the background and shade */
+}
+.blink{
+    animation: smooth-blink 1.5s infinite ease-in-out;
+}
+@keyframes smooth-blink {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
 }
