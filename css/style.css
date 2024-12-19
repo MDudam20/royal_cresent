@@ -12368,7 +12368,8 @@ section:after {
 }
 
 @media only screen and (max-width: 575px) {
-    .section-head h2.title {
+    .section-head h2.title,
+    .section-head h2.title-a {
         font-size: 28px;
     }
 }
@@ -16616,7 +16617,7 @@ label.error {
     background: transparent;
 }
 
-.about-box .about-bg {
+/* .about-box .about-bg {
     background-image: url(../images/royal/abous-us.png);
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -16628,6 +16629,13 @@ label.error {
     top: -150px;
     animation: wave2 3s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
    
+} */
+.about-2 img{
+    margin: 39px 0px;
+    box-shadow: 21px 20px #c4af6b;
+    border: 4px solid #3b0000;
+    border-radius: 10px;
+    animation: wave2 3s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -16645,11 +16653,19 @@ label.error {
         top: -100px;
     }
 }
-
+@media only screen and (max-width: 920px) {
+    .about-box .about-bg {
+        background-size: 80%;
+        background-position: right -100px bottom;
+        top: -100px;
+        display: none;
+    }
+}
 @media only screen and (max-width: 575px) {
     .about-box .about-bg {
         background-size: 50%;
         background-position: right 0px bottom;
+        display: none;
     }
 }
 
@@ -16658,7 +16674,7 @@ label.error {
     z-index: 1;
 }
 
-/* .about-box::before {
+.about-box::before {
     content: "";
     background-image: url(../images/about/about1.png);
     background-repeat: no-repeat;
@@ -16670,7 +16686,7 @@ label.error {
     left: 0;
     top: 0;
     animation: wave1 4s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-} */
+}
 
 @media only screen and (max-width: 1400px) {
     .about-box::before {
@@ -21408,11 +21424,15 @@ ol.comment-list li .children li {
 	border:0;
 	border-radius: 40px !important;
 } */
+.exhibition-bx{
+    background: rgb(196 175 107 / 40%);
+}
 
 .exhibition-bx p {
     color: #676767;
     font-size: 17px;
     line-height: 30px;
+    
 }
 
 .exhibition-bx .title {
@@ -21702,11 +21722,12 @@ ol.comment-list li .children li {
 }
 
 .logo-header img {
-    height: 108px;
-    width: 100%;
+    /* height: 108px; */
+    top: -38px;
+    width: 145px;
     padding: 10px 0px;
     position: relative;
-    top: -24px;
+    /* top: -24px; */
 
 } 
 .logo-header-b img{
@@ -21722,11 +21743,11 @@ ol.comment-list li .children li {
         height: 60px !important;
     }
     .logo-header img {
-        height: 115px;
+        height: 140px;
         width: 100%;
         padding: 10px 0px;
         position: relative;
-        top: -24px;
+        top: -44px;
     }
 }
 /* @media only screen and (max-width: 1120px){
@@ -21747,9 +21768,9 @@ ol.comment-list li .children li {
 }
 @media only screen and (max-width: 470px){
     .logo-header img {
-        height: 90px !important;
+        height: 100px !important;
         width: 100%;
-        padding: 10px 0px;
+        padding: 8px 0px 0px;
         top: 0px;
     }
     .logo-header-b img{
