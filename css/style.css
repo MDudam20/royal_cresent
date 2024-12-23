@@ -16651,6 +16651,7 @@ label.error {
     animation: wave2 3s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     width: 80%;
     float: end;
+    
 }
 
 @media only screen and (max-width: 1400px) {
@@ -24461,3 +24462,61 @@ color: #000;
         button:hover ~ .cursor-inner {
             transform: scale(2);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     
+
+        #aboutUs .about-2 {
+            display: flex;
+            justify-content: flex-end; /* Align image to the right */
+            align-items: center; /* Vertically centers the image */
+           
+        }
+        
+        #aboutUs img {
+            max-width: 100%; /* Makes the image responsive */
+            height: auto;
+            margin-right: -40px; /* Pulls the image slightly out of the container */
+        }
+        
+        @media (max-width: 500px) {
+            #aboutUs .row {
+                flex-direction: column; /* Stack text and image vertically */
+            }
+        
+            #aboutUs .col-md-7, #aboutUs .col-md-5 {
+                flex: 0 0 100%; /* Make columns full-width */
+                max-width: 100%;
+                text-align: center; /* Center-align text and image */
+            }
+        
+            #aboutUs .about-2 {
+                justify-content: center; /* Center the image on small screens */
+                padding-right: 0;
+            }
+        
+            #aboutUs img {
+                margin-right: 0; /* Remove extra margins for small screens */
+                width: 80%; /* Reduce image size for better readability */
+            }
+        }
+.short-btn{
+    margin-bottom: 10px;
+}
