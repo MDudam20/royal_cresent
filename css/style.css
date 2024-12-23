@@ -2705,8 +2705,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color:#3b0000;
-    border-color: #3b0000;
+    background-color:#EBA225;
+    border-color: #EBA225;
     font-family: 'againstregular';
     letter-spacing: 1px;
 }
@@ -12352,7 +12352,7 @@ section:after {
 
 
 .section-head h2.title-a {
-    font-size: 42px;
+    font-size: 30px;
     line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
@@ -12361,21 +12361,34 @@ section:after {
 }
 
 @media only screen and (max-width: 1400px) {
-    .section-head h2.title {
-        font-size: 40px;
+    .section-head h2.title,
+    .section-head h2.title-a {
+        font-size: 30px;
     }
+    
 }
 
 @media only screen and (max-width: 1199px) {
-    .section-head h2.title {
-        font-size: 35px;
+    .section-head h2.title ,
+    .section-head h2.title-a{
+        font-size: 25px;
+    }
+    .section-head h4 {
+        font-size: 14px;
     }
 }
-
+@media only screen and (max-width: 900px) {
+    .section-head h4 {
+        font-size: 14px;
+    }
+}
 @media only screen and (max-width: 575px) {
     .section-head h2.title,
     .section-head h2.title-a {
-        font-size: 28px;
+        font-size: 23px;
+    }
+    .section-head h4 {
+        font-size: 12px;
     }
 }
 
@@ -12437,7 +12450,7 @@ section:after {
 }
 .section-head h4{
     font-family: 'GildaDisplay-Regular', sans-serif;
-    color: #c4af6b;
+    color: #EBA225;
     font-size: 18px;
     font-weight: 600;
 }
@@ -19097,6 +19110,38 @@ label.error {
     width: 35%;
     
 }
+@media only screen and (max-width: 1200px){
+    .aminite-icon-bx img{
+        width: 45%;
+    }
+    .aminite-icon-bx .title{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .aminite-icon-bx img{
+        width: 45%;
+    }
+    .aminite-icon-bx .title{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .aminite-icon-bx img{
+        width: 45%;
+    }
+    .aminite-icon-bx .title{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .amenities-section{
+        padding: 50px 35px;
+    }
+    .aminite-icon-bx img {
+        width: 35%;
+    }
+}
 
 .aminite-icon-bx:hover img {
     transform: rotateY(360deg);
@@ -19105,11 +19150,12 @@ label.error {
 .aminite-icon-bx .title {
     /* text-transform: uppercase; */
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 17px;
     transition: color 0.3s ease;
     color: #fff;
     font-family: 'FuturaMdBTMedium';
     padding-top: 10px;
+    letter-spacing: 1px;
 }
 
 .aminite-icon-bx:hover .title {
