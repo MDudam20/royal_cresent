@@ -24606,3 +24606,13 @@ color: #000;
 .close-btn:hover {
     color: red; /* Optional hover effect */
 }
+
+
+
+
+/* Hide the close button on larger screens (desktop) */
+@media (min-width: 992px) {
+    .close-btn {
+        display: none; /* Hide the close button for desktop screens */
+    }
+}
