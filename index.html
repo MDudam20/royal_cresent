@@ -94,8 +94,10 @@
                             </div> -->
                             <div class="header-nav navbar-collapse collapse justify-content-center" id="navbarNavDropdown">
                                 <div class="logo-header d-md-block d-lg-none">
-                                    <a href="index.html"><img src="images/royal/royal-cresent-logo.png" alt=""></a>
+                                    <a href="index.html"><img src="images/royal/royal-black.png" alt=""></a>
                                 </div>
+                                <!-- Close Button -->
+                                <button class="close-btn" id="closeNavbar">&times;</button>
                                 <ul class="nav navbar-nav navbar custom-menu">
                                     <li class="active"><a href="#">Home</a></li>
                                     <li class=""><a href="javascript:void(0);">About<i class="fa fa-chevron-down"></i></a>
@@ -104,7 +106,6 @@
                                             <li><a href="logo-concept.html">Logo Concept</a></li>
                                             <li><a href="">Project Preface</a></li>
                                             <li><a href="landscape-intent.html">Landscape Features</a></li>
-                                            
                                         </ul>
                                     </li>
                                     <li class=""><a href="javascript:void(0);">Highlights<i class="fa fa-chevron-down"></i></a>
@@ -115,20 +116,21 @@
                                             <li><a href="">Plans </a></li>
                                             <li><a href="">⁠Specification </a></li>
                                         </ul>
-                                    </li>                                  
-                                    <li><a href="">Amenities</a></li>                               
+                                    </li>
+                                    <li><a href="">Amenities</a></li>
                                     <li><a href="">Gallery</a></li>
-                                    <li><a href="">Contact</a></li>           
+                                    <li><a href="">Contact</a></li>
                                 </ul>
                                 <div class="dlab-social-icon">
                                     <ul>
                                         <li><a class="site-button circle fa fa-facebook" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button  circle fa fa-twitter" href="javascript:void(0);"></a></li>
+                                        <li><a class="site-button circle fa fa-twitter" href="javascript:void(0);"></a></li>
                                         <li><a class="site-button circle fa fa-linkedin" href="javascript:void(0);"></a></li>
                                         <li><a class="site-button circle fa fa-instagram" href="javascript:void(0);"></a></li>
                                     </ul>
                                 </div>
                             </div>
+                            
 
                             <div class="logo-header-b motion logo-dark">
                                 <a href="index.html">
@@ -897,6 +899,13 @@
             'use strict';
             dz_rev_slider_3();
         }); /*ready*/
+    </script>
+    <script>
+        document.getElementById('closeNavbar').addEventListener('click', function () {
+    const navbar = document.getElementById('navbarNavDropdown');
+    navbar.classList.remove('show'); // Remove Bootstrap's 'show' class to close the menu
+});
+
     </script>
 </body>
 
