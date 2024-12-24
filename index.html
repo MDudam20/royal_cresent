@@ -760,48 +760,50 @@
             <section class="content-inner exhibition-bx">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <!-- Image Carousel -->
+                        <div class="col-lg-7 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
                             <div class="exhibition-carousel owl-carousel owl-none m-b30">
-                                <div class="item"><img src="images/gallery/gallery-6/pic1.jpg" alt=""></div>
-                                <div class="item"><img src="images/gallery/gallery-6/pic2.jpg" alt=""></div>
-                                <div class="item"><img src="images/gallery/gallery-6/pic3.jpg" alt=""></div>
-                                <div class="item"><img src="images/gallery/gallery-6/pic4.jpg" alt=""></div>
+                                <div class="item" data-index="0"><img src="images/gallery/gallery-6/pic1.jpg" alt=""></div>
+                                <div class="item" data-index="1"><img src="images/gallery/gallery-6/pic2.jpg" alt=""></div>
+                                <div class="item" data-index="2"><img src="images/gallery/gallery-6/pic3.jpg" alt=""></div>
+                                <div class="item" data-index="3"><img src="images/gallery/gallery-6/pic4.jpg" alt=""></div>
                             </div>
                         </div>
-                        <div class="col-lg-6 m-b30">
+            
+                        <!-- Highlights Section -->
+                        <div class="col-lg-5 m-b30">
                             <div class="section-head">
                                 <h2 class="title wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">Project Highlights</h2>
                                 <div class="dlab-separator bg-primary wow fadeInUp" data-wow-duration="4s" data-wow-delay="0.4s"></div>
                             </div>
                             <div class="highlights-list">
-                                <div class="highlight-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+                                <div class="highlight-item" data-index="0">
                                     <i class="icon fa fa-home text-primary"></i>
                                     <h5 class="mb-2">Spacious Villas</h5>
                                     <p>Meticulously designed 250+ villas combining modern and classic architecture.</p>
                                 </div>
-                                <div class="highlight-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.8s">
+                                <div class="highlight-item" data-index="1">
                                     <i class="icon fa fa-leaf text-primary"></i>
                                     <h5 class="mb-2">Lush Landscapes</h5>
                                     <p>Spread over 30 acres of green landscapes and serene surroundings.</p>
                                 </div>
-                                <div class="highlight-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+                                <div class="highlight-item" data-index="2">
                                     <i class="icon fa fa-star text-primary"></i>
                                     <h5 class="mb-2">Modern Interiors</h5>
                                     <p>Spacious living areas, state-of-the-art kitchens, and luxurious bedrooms.</p>
                                 </div>
-                                <div class="highlight-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.2s">
+                                <div class="highlight-item" data-index="3">
                                     <i class="icon fa fa-users text-primary"></i>
                                     <h5 class="mb-2">Exclusive Club</h5>
                                     <p>Clubhouse with gym, theatre, café, social spaces, and a cards room.</p>
                                 </div>
                             </div>
-                            <a href="contact-us-1.html" class="btn btn-primary m-r10 m-b10 wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.4s">Contact Us</a>
-                            <a href="portfolio-1.html" class="btn btn-primary wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.6s">View Portfolio</a>
                         </div>
                     </div>
                 </div>
             </section>
             
+
             
         </div>
         <!-- Content END-->
@@ -948,6 +950,102 @@
         document.getElementById('closeNavbar').addEventListener('click', function () {
     const navbar = document.getElementById('navbarNavDropdown');
     navbar.classList.remove('show'); // Remove Bootstrap's 'show' class to close the menu
+});
+
+    </script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".exhibition-carousel");
+    const highlightItems = document.querySelectorAll(".highlight-item");
+
+    // Initialize Owl Carousel
+    $(carousel).owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        items: 1,
+        onChanged: syncHighlight // Owl Carousel event for slide change
+    });
+
+    function syncHighlight(event) {
+        const index = event.item.index - event.relatedTarget._clones.length / 2;
+        const adjustedIndex = (index < 0 ? event.item.count : index) % event.item.count;
+
+        // Remove highlight from all items
+        highlightItems.forEach(item => item.classList.remove("highlight-active"));
+
+        // Add highlight to the current item
+        const activeHighlight = document.querySelector(`.highlight-item[data-index="${adjustedIndex}"]`);
+        if (activeHighlight) {
+            activeHighlight.classList.add("highlight-active");
+        }
+    }
+});
+
+    </script> -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".exhibition-carousel");
+    const highlightItems = document.querySelectorAll(".highlight-item");
+
+    // Initialize Owl Carousel with autoplay
+    $(carousel).owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        items: 1,
+        autoplay: true, // Enables automatic sliding
+        autoplayTimeout: 2000, // Time between slides (in ms)
+        autoplayHoverPause: true, // Pause on hover
+        onChanged: syncHighlight // Event to synchronize highlights
+    });
+
+    function syncHighlight(event) {
+        const index = event.item.index - event.relatedTarget._clones.length / 2;
+        const adjustedIndex = (index < 0 ? event.item.count : index) % event.item.count;
+
+        // Remove highlight from all items
+        highlightItems.forEach(item => item.classList.remove("highlight-active"));
+
+        // Add highlight to the current item
+        const activeHighlight = document.querySelector(`.highlight-item[data-index="${adjustedIndex}"]`);
+        if (activeHighlight) {
+            activeHighlight.classList.add("highlight-active");
+        }
+    }
+});
+
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".exhibition-carousel");
+    const highlightItems = document.querySelectorAll(".highlight-item");
+
+    // Initialize Owl Carousel with autoplay
+    $(carousel).owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        onChanged: syncHighlight
+    });
+
+    function syncHighlight(event) {
+        const index = event.item.index - event.relatedTarget._clones.length / 2;
+        const adjustedIndex = (index < 0 ? event.item.count : index) % event.item.count;
+
+        // Remove highlight from all items
+        highlightItems.forEach(item => item.classList.remove("highlight-active"));
+
+        // Add highlight to the current item
+        const activeHighlight = document.querySelector(`.highlight-item[data-index="${adjustedIndex}"]`);
+        if (activeHighlight) {
+            activeHighlight.classList.add("highlight-active");
+        }
+    }
 });
 
     </script>

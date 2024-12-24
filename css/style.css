@@ -24682,3 +24682,36 @@ color: #000;
     font-size: 14px;
     color: #555;
 }
+
+
+
+.highlight-active {
+    background: #fffbe6; /* Light yellow background for emphasis */
+    border: 2px solid #ffd700; /* Golden yellow border */
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.6), 
+                0 0 20px 10px rgba(255, 215, 0, 0.3); /* Reduced intensity and size */
+    transform: scale(1.05); /* Subtle zoom-in effect */
+    animation: pulse 1.5s infinite; /* Add pulsing effect */
+    transition: all 0.4s ease;
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.6),
+                    0 0 20px 10px rgba(255, 215, 0, 0.3);
+        transform: scale(1.05);
+    }
+    50% {
+        box-shadow: 0 0 12px 5px rgba(255, 215, 0, 0.8),
+                    0 0 25px 12px rgba(255, 215, 0, 0.4); /* Slightly larger glow in the middle */
+        transform: scale(1.08); /* Subtle pulse effect */
+    }
+    100% {
+        box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.6),
+                    0 0 20px 10px rgba(255, 215, 0, 0.3);
+        transform: scale(1.05);
+    }
+}
+
