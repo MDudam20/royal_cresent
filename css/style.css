@@ -16658,7 +16658,7 @@ label.error {
 } */
 .about-2 img{
     /* margin: 39px 0px; */
-    box-shadow: 21px 20px #c4af6b;
+    box-shadow: 21px 20px #EBA225;
     border: 4px solid #3b0000;
     border-radius: 10px;
     animation: wave2 3s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
@@ -24004,7 +24004,16 @@ color: #000;
     margin: 20px;
     position: relative;
 }
-
+@media (max-width: 768px){
+    .title-main {
+        font-size: 22px;
+    }
+}
+@media (max-width: 508px){
+    .title-main {
+        font-size: 20px;
+    }
+}
 /* Fade-in animation for the text */
 @keyframes fadeInText {
     0% {
