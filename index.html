@@ -761,17 +761,21 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <!-- Image Carousel -->
-                        <div class="col-lg-7 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <div class="col-lg-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
                             <div class="exhibition-carousel owl-carousel owl-none m-b30">
                                 <div class="item" data-index="0"><img src="images/gallery/gallery-6/pic1.jpg" alt=""></div>
                                 <div class="item" data-index="1"><img src="images/gallery/gallery-6/pic2.jpg" alt=""></div>
                                 <div class="item" data-index="2"><img src="images/gallery/gallery-6/pic3.jpg" alt=""></div>
                                 <div class="item" data-index="3"><img src="images/gallery/gallery-6/pic4.jpg" alt=""></div>
+                                <div class="item" data-index="4"><img src="images/gallery/gallery-6/pic4.jpg" alt=""></div>
+                                <div class="item" data-index="5"><img src="images/gallery/gallery-6/pic4.jpg" alt=""></div>
+                                <div class="item" data-index="6"><img src="images/gallery/gallery-6/pic4.jpg" alt=""></div>
+                                <div class="item" data-index="7"><img src="images/gallery/gallery-6/pic4.jpg" alt=""></div>
                             </div>
                         </div>
             
                         <!-- Highlights Section -->
-                        <div class="col-lg-5 m-b30">
+                        <div class="col-lg-6 m-b30">
                             <div class="section-head">
                                 <h2 class="title wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">Project Highlights</h2>
                                 <div class="dlab-separator bg-primary wow fadeInUp" data-wow-duration="4s" data-wow-delay="0.4s"></div>
@@ -796,24 +800,24 @@
                                     <h5 class="mb-2">Luxurious gymnasium, state-of-the-art equipment.</h5>
                                   
                                 </div>
-                                <div class="highlight-item" data-index="3">
+                                <div class="highlight-item" data-index="4">
                                     <i class="icon fa fa-spa text-primary"></i>
                                     <h5 class="mb-2">Relaxing spa, wellness experience.</h5>
                                    
                                 </div>
-                                <div class="highlight-item" data-index="3">
+                                <div class="highlight-item" data-index="5">
                                     <i class="icon fa fa-users text-primary"></i>
-                                    <h5 class="mb-2">Exclusive Club</h5>
+                                    <h5 class="mb-2">Senior citizen wellness zone.</h5>
                                    
                                 </div>
-                                <div class="highlight-item" data-index="3">
-                                    <i class="icon fa fa-users text-primary"></i>
-                                    <h5 class="mb-2">Exclusive Club</h5>
+                                <div class="highlight-item" data-index="6">
+                                    <i class="icon fa fa-child text-primary"></i>
+                                    <h5 class="mb-2">Children's play zone area.</h5>
                                    
                                 </div>
-                                <div class="highlight-item" data-index="3">
-                                    <i class="icon fa fa-users text-primary"></i>
-                                    <h5 class="mb-2">Exclusive Club</h5>
+                                <div class="highlight-item" data-index="7">
+                                    <i class="icon fa fa-theater-masks text-primary"></i>
+                                    <h5 class="mb-2">Luxury cinema theatre experience.</h5>
                                    
                                 </div>
                                 
@@ -1037,28 +1041,29 @@
 
     </script> -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".exhibition-carousel");
     const highlightItems = document.querySelectorAll(".highlight-item");
 
     // Initialize Owl Carousel with autoplay
-    $(carousel).owlCarousel({
+    const owlCarousel = $(carousel).owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
         items: 1,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 2000,
         autoplayHoverPause: true,
-        onChanged: syncHighlight
+        onChanged: syncHighlight,
     });
 
+    // Synchronize carousel with highlights
     function syncHighlight(event) {
         const index = event.item.index - event.relatedTarget._clones.length / 2;
         const adjustedIndex = (index < 0 ? event.item.count : index) % event.item.count;
 
         // Remove highlight from all items
-        highlightItems.forEach(item => item.classList.remove("highlight-active"));
+        highlightItems.forEach((item) => item.classList.remove("highlight-active"));
 
         // Add highlight to the current item
         const activeHighlight = document.querySelector(`.highlight-item[data-index="${adjustedIndex}"]`);
@@ -1066,6 +1071,24 @@
             activeHighlight.classList.add("highlight-active");
         }
     }
+
+    // Add hover functionality to highlight items
+    highlightItems.forEach((highlight) => {
+        highlight.addEventListener("mouseenter", function () {
+            const index = parseInt(highlight.getAttribute("data-index"), 10);
+            
+            // Stop autoplay on hover
+            owlCarousel.trigger("stop.owl.autoplay");
+
+            // Move the carousel to the hovered index
+            owlCarousel.trigger("to.owl.carousel", [index]);
+        });
+
+        highlight.addEventListener("mouseleave", function () {
+            // Restart autoplay after hover
+            owlCarousel.trigger("play.owl.autoplay");
+        });
+    });
 });
 
     </script>
