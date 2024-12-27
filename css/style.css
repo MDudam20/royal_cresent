@@ -16407,8 +16407,8 @@ label.error {
 }
 
 .content-inner-1 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -19153,7 +19153,7 @@ label.error {
     font-size: 17px;
     transition: color 0.3s ease;
     color: #fff;
-    font-family: 'FuturaMdBTMedium';
+    font-family: 'GildaDisplay-Regular';
     padding-top: 10px;
     letter-spacing: 1px;
 }
@@ -21596,7 +21596,7 @@ ol.comment-list li .children li {
     height: 100%;
     right: 0;
     top: 0;
-    background-color:#3b0000;
+    background-color:rgb(235, 162, 37);
     z-index: -1;
 }
 
@@ -23028,7 +23028,7 @@ footer .widget-link a {
 .amenities-section {
     position: relative;
     overflow: hidden;
-    background-color: rgb(153,120,94);
+    background-color:rgb(153,120,94);
 }
 
 .amenities-section .background {
@@ -24001,7 +24001,7 @@ color: #000;
 
 /* Title Styling */
 .title-main {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
@@ -24070,8 +24070,8 @@ color: #000;
 
 /* Applying the fade-up effect to the border */
 .border-image {
-    width: 50%; /* Adjust based on the image width */
-    height: 40px; /* Adjust height for your border image */
+    width: 35%;
+    height: 26px; /* Adjust height for your border image */
     background: url('../images/royal/gold-border.png') no-repeat center;
     background-size: contain;
     animation: fadeUpBorder 2s ease-in-out forwards;
@@ -24691,12 +24691,13 @@ color: #000;
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 10px 15px;
     border: 1px solid #e3e3e3;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%;
 }
 
 .highlight-item:hover {
@@ -24705,12 +24706,13 @@ color: #000;
 }
 
 .highlight-item .icon {
-    font-size: 30px;
+    font-size: 20px;
     margin-right: 15px;
+    color:rgba(143,96,143,0.8);
 }
 
 .highlight-item h5 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -24752,4 +24754,172 @@ color: #000;
         transform: scale(1.05);
     }
 }
+.map-container {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    height: 100%;
+    min-height: 100vh; /* Ensures proper height */
+}
 
+/* Map Section */
+.map-section {
+    flex: 1.4;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Section */
+.content-section {
+    flex: 1;
+    background: rgb(153,120,94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #e7d9c4;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 0; /* No gap between items */
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+}
+
+.info-item {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: #e7d9c4;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.info-item:hover i {
+    transform: scale(1.2); /* Increase size slightly on hover */
+    color: #f4d03f; /* Add hover color */
+}
+
+.info-item h3 {
+    font-size: 1rem;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'GildaDisplay-Regular';
+}
+
+.info-item p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #c2b59c;
+    font-family: 'FuturaMdBTMedium';
+}
+
+/* Vertical Dotted Line */
+.info-item:not(:nth-child(3n))::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    border-right: 1px dotted #c2b59c;
+}
+
+/* Horizontal Dotted Line */
+.info-item:not(:nth-last-child(-n+3))::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-bottom: 1px dotted #c2b59c;
+}
+
+/* Media Query for Medium Screens (Tablets and Small Laptops) */
+@media (max-width: 1024px) {
+    .map-container {
+        flex-direction: column;
+    }
+
+    .content-section {
+        flex: none;
+        padding: 30px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
+    }
+
+    
+}
+
+/* Media Query for Small Screens (Mobile Devices) */
+@media (max-width: 500px) {
+    .map-container {
+        flex-direction: column;
+    }
+
+    .map-section {
+        height: 50vh;
+    }
+
+    .content-section {
+        height: auto;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr); /* Single column for small screens */
+    }
+
+    .info-item {
+        padding: 15px;
+    }
+
+    .info-item i {
+        font-size: 1.8rem; /* Adjust icon size */
+    }
+
+    .info-item h3 {
+        font-size: 0.95rem;
+    }
+
+    .info-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Add vertical dotted line between columns */
+    /* .info-item:not(:nth-last-child(1-2n))::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -10px; 
+        bottom: 0;
+        width: 1px;
+        border-right: 1px dotted #c2b59c;
+    }
+
+   
+    .info-item::before {
+        display: none;
+    } */
+    .info-item::after,
+    .info-item::before {
+        display: none; /* Hide dotted lines for cleaner view */
+    }
+
+}
