@@ -22830,7 +22830,7 @@ footer .footer-title:after {
 }
 
 footer .footer-top {
-    background: rgb(153,120,94);
+    background: #216857;
   
     /* background: #9CB096; */
     padding: 70px 0 30px;
@@ -23028,7 +23028,7 @@ footer .widget-link a {
 .amenities-section {
     position: relative;
     overflow: hidden;
-    background-color:rgb(153,120,94);
+    background-color:#216857;
 }
 
 .amenities-section .background {
@@ -23999,6 +23999,29 @@ color: #000;
   
 }
 
+
+.title-main_a {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'againstregular', sans-serif;
+    color: #3b0000;
+    background: #EBA225;
+    /* background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0)); */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: h1anim 8s linear forwards, fadeInText 2s ease-in-out forwards; /* Adding fade-in effect */
+    background-size: 500% auto;
+    display: inline-block;
+    background-position: 150% center;
+    background-repeat: no-repeat;
+    margin: 20px;
+    position: relative;
+}
+
+
 /* Title Styling */
 .title-main {
     font-size: 25px;
@@ -24021,12 +24044,15 @@ color: #000;
     position: relative;
 }
 @media (max-width: 768px){
-    .title-main {
+    .title-main , 
+    .title-main_a {
         font-size: 22px;
     }
 }
 @media (max-width: 508px){
-    .title-main {
+    .title-main,
+    
+.title-main_a {
         font-size: 20px;
     }
 }
@@ -24778,7 +24804,7 @@ color: #000;
 /* Content Section */
 .content-section {
     flex: 1;
-    background: rgb(153,120,94);
+    background: #54170e;
     display: flex;
     flex-direction: column;
     justify-content: center;
