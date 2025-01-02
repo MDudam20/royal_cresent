@@ -12451,6 +12451,9 @@ section:after {
     color: #000;
     text-align: justify;
 }
+.section-head2 p{
+    text-align: center !important;
+}
 .section-head h4{
     font-family: 'GildaDisplay-Regular', sans-serif;
     color: #EBA225;
@@ -24654,6 +24657,9 @@ color: #000;
             height: auto;
             margin-right: -40px; /* Pulls the image slightly out of the container */
         }
+        .new-image{
+            max-width: 35% !important;
+        }
         
         @media (max-width: 500px) {
             #aboutUs .row {
@@ -26164,3 +26170,23 @@ height: 110px;
     margin-right: 8px;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
