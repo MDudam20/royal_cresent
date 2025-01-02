@@ -1,24 +1,32 @@
-const featureItems = document.querySelectorAll('.feature-item');
-const highlightAreas = document.querySelectorAll('.highlight-area');
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all features and highlights
+  const features = document.querySelectorAll(".feature");
+  const highlights = document.querySelectorAll(".highlight");
 
-featureItems.forEach((item) => {
-    item.addEventListener('mouseover', () => {
-        // Remove active from all highlights
-        highlightAreas.forEach(area => area.classList.remove('active'));
+  features.forEach((feature) => {
+    const key = feature.getAttribute("data-key");
+    const color = feature.getAttribute("data-color");
 
-        const highlightId = item.getAttribute('data-highlight');
-        const highlightArea = document.getElementById('highlight-' + highlightId);
-        
-        if (highlightArea) {
-            highlightArea.classList.add('active');
-        }
+    // Add hover event listener
+    feature.addEventListener("mouseenter", () => {
+      const highlight = document.querySelector(`.highlight[data-key="${key}"]`);
+      if (highlight) {
+        highlight.style.backgroundColor = color;
+        highlight.style.borderColor = color;
+        highlight.style.transform = "scale(1)";
+        highlight.style.opacity = "1";
+      }
     });
-});
 
-featureItems.forEach((item) => {
-    item.addEventListener('mouseleave', () => {
-        highlightAreas.forEach(area => area.classList.remove('active'));
+    // Add mouseleave event listener
+    feature.addEventListener("mouseleave", () => {
+      const highlight = document.querySelector(`.highlight[data-key="${key}"]`);
+      if (highlight) {
+        highlight.style.transform = "scale(0)";
+        highlight.style.opacity = "0";
+      }
     });
+  });
 });
 
 window.onscroll = function() {scrollFunction()};
