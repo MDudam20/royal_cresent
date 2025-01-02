@@ -16289,7 +16289,7 @@ label.error {
 .amenities-carousel .owl-next {
     width: 65px;
     height: 65px;
-    background: #a6611c;
+    background: #216857;
     color: #fff;
     text-align: center;
     line-height: 65px;
@@ -16309,7 +16309,7 @@ label.error {
 
 .amenit-box {
     z-index: 2;
-    border: 5px solid black;
+    /* border: 5px solid black; */
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
     padding: 0;
     -webkit-transition: all 0.5s;
@@ -16330,7 +16330,7 @@ label.error {
 .amenit-box .info {
     padding: 15px 30px;
     display: inline-block;
-    background: #216857;
+    background: #fff;
     position: absolute;
     bottom: -20px;
     left: 50%;
@@ -16378,7 +16378,7 @@ label.error {
 }
 
 .amenit-box .info .title i {
-    color: #a6611c;
+    color: #216857;
     font-size: 40px;
     line-height: 1;
     margin-right: 10px;
@@ -21273,7 +21273,7 @@ ol.comment-list li .children li {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .history-box p {
@@ -21281,6 +21281,7 @@ ol.comment-list li .children li {
     line-height: 26px;
     font-size: 16px;
     margin-bottom: 0;
+    font-family: 'FuturaMdBTMedium', sans-serif;
 }
 
 @media only screen and (max-width: 991px) {
@@ -21366,7 +21367,8 @@ ol.comment-list li .children li {
 }
 
 .history-head h2 {
-    font-size: 60px;
+    font-size: 40px;
+    font-family: 'againstregular', sans-serif;
 }
 
 @media only screen and (max-width: 991px) {
