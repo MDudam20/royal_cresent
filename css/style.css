@@ -26235,7 +26235,7 @@ height: 110px;
 @media (max-width: 800px){
     .parcel-two {
         top: 16%;
-        left: 40%;
+        left: 49%;
         width: 30%;
         height: 59%;
         transform: rotate(-32deg);
@@ -26243,8 +26243,29 @@ height: 110px;
         background-color: rgba(0, 128, 255, 0.5);
     }
 }
-
-
+@media (max-width: 500px){
+    .parcel-two {
+        top: 16%;
+        left: 46%;
+        width: 33%;
+        height: 59%;
+        transform: rotate(-21deg);
+        transform-origin: center;
+        background-color: rgba(0, 128, 255, 0.5);
+    }
+    
+}
+@media (max-width: 400px){
+    .parcel-two {
+        top: 16%;
+        left: 46%;
+        width: 33%;
+        height:51;
+        transform: rotate(-21deg);
+        transform-origin: center;
+        background-color: rgba(0, 128, 255, 0.5);
+    }
+}
 
 
 
