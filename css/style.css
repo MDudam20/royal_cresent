@@ -21355,7 +21355,7 @@ ol.comment-list li .children li {
 }
 
 .history-head {
-    border-left: 4px solid #a6611c;
+    border-left: 4px solid #EBA225;
     padding-left: 25px;
     margin-bottom: 15px;
 }
@@ -21367,13 +21367,14 @@ ol.comment-list li .children li {
 }
 
 .history-head h2 {
-    font-size: 40px;
+    font-size: 25px;
     font-family: 'againstregular', sans-serif;
+    color: #216857;
 }
 
 @media only screen and (max-width: 991px) {
     .history-head h2 {
-        font-size: 40px;
+        font-size: 20px;
     }
 }
 
@@ -23750,6 +23751,39 @@ color: #000;
     transform: translate(-20%, -20%) scaleX(-1);
     right: -50px;
     animation: moveUpDown 2s infinite; /* Adjust timing as needed */
+}
+@media (max-width: 500px){
+    .bird-bg{
+        width: 40%;
+        right: -10px;
+        top: 70px;
+    }
+    /* .bird-bg-2{
+        width: 40%;
+        top: 65%;
+        transform: translate(-20%, -20%) ;
+        right: 50px;
+    
+    } */
+    .club-bg{
+        width: 42%;
+        top: 32% !important;
+        left: 0px;
+    }
+}
+.bird-bg-2{
+    top: 65%;
+    transform: translate(-20%, -20%) ;
+    right: -50px;
+    animation: moveUpDown 2s infinite; /* Adjust timing as needed */
+}
+.club-bg{
+    top: 35%;
+    left: 0px;
+}
+.club-bg-1{
+    top: 64%;
+    /* right: -50px; */
 }
 @keyframes moveUpDown {
     0% {
