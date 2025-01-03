@@ -26174,7 +26174,7 @@ height: 110px;
     list-style: none;
 }
 
-.info-item {
+.info-item-p{
     margin-bottom: 10px;
     padding: 10px;
     cursor: pointer;
@@ -26182,7 +26182,7 @@ height: 110px;
     font-family: 'GildaDisplay-Regular';
 }
 
-.info-item:hover {
+.info-item-p:hover {
     background-color: #fff;
     color: #000;
     font-weight: bold;
