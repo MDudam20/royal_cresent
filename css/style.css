@@ -26230,7 +26230,9 @@ height: 110px;
     background-color: rgba(0, 128, 255, 0.5);
     }
 }
-@media (max-width: 500px){
+
+
+@media (max-width: 800px){
     .parcel-two {
         top: 16%;
         left: 46%;
