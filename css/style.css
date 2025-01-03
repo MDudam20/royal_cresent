@@ -26221,7 +26221,7 @@ height: 110px;
 
 @media (max-width: 1124px){
     .parcel-two {
-  
+    top: 15%;
     left: 45%;
     width: 34%;
     height: 78%;
@@ -26235,8 +26235,8 @@ height: 110px;
 @media (max-width: 800px){
     .parcel-two {
         top: 16%;
-        left: 46%;
-        width: 33%;
+        left: 40%;
+        width: 30%;
         height: 59%;
         transform: rotate(-32deg);
         transform-origin: center;
